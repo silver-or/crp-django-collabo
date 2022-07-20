@@ -8,7 +8,7 @@ from files import fileManager as fm
 @csrf_exempt
 @require_POST
 def recommend_user_prod(request):
-    fm.handle_user_recProds_file(request.FILES['files'])
+    fm.handle_user_recProds_file(request.FILES['file'])
     response = HttpResponse("ok")
     response.status_code = 200
     return response
